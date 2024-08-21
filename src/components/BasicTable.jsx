@@ -16,7 +16,6 @@ export default function BasicTable({ data, columns }) {
     "last_name": "Kruger",
     "email": "ikruger0@huffingtonpost.com",
     "gender": "Male",
-    "dob": "2023-04-28T11:19:35Z"
   }
 */
 
