@@ -74,7 +74,7 @@ export default function BasicTable({ data, columns }) {
             </tr>
           ))}
         </tbody>
-          {/* <tfoot>
+        {/* <tfoot>
             {table.getFooterGroups().map(footerGroup => (
               <tr key={footerGroup.id}>
                 {footerGroup.headers.map(header => (
