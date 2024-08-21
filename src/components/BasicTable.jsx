@@ -6,14 +6,12 @@ import {
   getPaginationRowModel,
   getSortedRowModel,
   useReactTable,
-} from '@tanstack/react-table'
-import { useState } from 'react'
+} from "@tanstack/react-table";
+import { useState } from "react";
 
 export default function BasicTable({ data, columns }) {
-
-
-  const [sorting, setSorting] = useState([])
-  const [filtering, setFiltering] = useState('')
+  const [sorting, setSorting] = useState([]);
+  const [filtering, setFiltering] = useState("");
 
   const table = useReactTable({
     data,
@@ -28,20 +26,20 @@ export default function BasicTable({ data, columns }) {
     },
     onSortingChange: setSorting,
     onGlobalFilterChange: setFiltering,
-  })
+  });
 
   return (
-    <div className='w3-container'>
+    <div className="w3-container">
       <input
-        type='text'
+        type="text"
         value={filtering}
-        onChange={e => setFiltering(e.target.value)}
+        onChange={(e) => setFiltering(e.target.value)}
       />
-      <table className='w3-table-all'>
+      <table className="w3-table-all">
         <thead>
-          {table.getHeaderGroups().map(headerGroup => (
+          {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
-              {headerGroup.headers.map(header => (
+              {headerGroup.headers.map((header) => (
                 <th
                   key={header.id}
                   onClick={header.column.getToggleSortingHandler()}
@@ -53,8 +51,8 @@ export default function BasicTable({ data, columns }) {
                         header.getContext()
                       )}
                       {
-                        { asc: '🔼', desc: '🔽' }[
-                        header.column.getIsSorted() ?? null
+                        { asc: "🔼", desc: "🔽" }[
+                          header.column.getIsSorted() ?? null
                         ]
                       }
                     </div>
@@ -66,9 +64,9 @@ export default function BasicTable({ data, columns }) {
         </thead>
 
         <tbody>
-          {table.getRowModel().rows.map(row => (
+          {table.getRowModel().rows.map((row) => (
             <tr key={row.id}>
-              {row.getVisibleCells().map(cell => (
+              {row.getVisibleCells().map((cell) => (
                 <td key={cell.id}>
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </td>
@@ -112,5 +110,5 @@ export default function BasicTable({ data, columns }) {
         </button>
       </div>
     </div>
-  )
+  );
 }
