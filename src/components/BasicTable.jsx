@@ -54,7 +54,7 @@ export default function BasicTable({ data, columns }) {
                       )}
                       {
                         { asc: '🔼', desc: '🔽' }[
-                          header.column.getIsSorted() ?? null
+                        header.column.getIsSorted() ?? null
                         ]
                       }
                     </div>
@@ -76,7 +76,7 @@ export default function BasicTable({ data, columns }) {
             </tr>
           ))}
         </tbody>
-          {/* <tfoot>
+        {/* <tfoot>
             {table.getFooterGroups().map(footerGroup => (
               <tr key={footerGroup.id}>
                 {footerGroup.headers.map(header => (
