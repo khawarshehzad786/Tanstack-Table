@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { DateTime } from 'luxon'
 import { useMemo } from 'react'
 import './App.css'
@@ -84,7 +85,7 @@ function App() {
   return (
     <>
       <h1>React-table</h1>
-      <BasicTable data={data} columns={movieColumns} />
+       <BasicTable data={data} columns={movieColumns} />
     </>
   )
 }
