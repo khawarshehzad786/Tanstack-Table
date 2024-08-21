@@ -9,15 +9,7 @@ import {
 import { useState } from 'react'
 
 export default function BasicTable({ data, columns }) {
-  /* 
-{
-    "id": 1,
-    "first_name": "Isador",
-    "last_name": "Kruger",
-    "email": "ikruger0@huffingtonpost.com",
-    "gender": "Male",
-  }
-*/
+
 
   const [sorting, setSorting] = useState([])
   const [filtering, setFiltering] = useState('')
